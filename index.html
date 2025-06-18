@@ -1,118 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Rohit Sahu | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohit Sahu | Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background: #f4f4f4;
-  color: #333;
-}
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      color: #333;
+    }
 
-header {
-  background: #007bff;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
+    header {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b, #ff6a00);
+      background-size: 300% 300%;
+      animation: gradientBG 8s ease infinite;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 5px solid #ffeb3b;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
 
-header h1 {
-  margin: 0;
-}
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      font-weight: 500;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    }
 
-section {
-  padding: 20px;
-  background: white;
-  margin: 20px;
-  border-radius: 8px;
-}
+    nav {
+      margin-top: 20px;
+    }
 
-h2 {
-  color: #007bff;
-}
+    nav a {
+      display: inline-block;
+      color: #fff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
 
-ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
+    nav a:hover {
+      background: #ffeb3b;
+      color: #000;
+      transform: scale(1.05);
+    }
 
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #222;
-  color: #eee;
-}
+    nav a.active {
+      background: #ffeb3b;
+      color: black !important;
+      border-radius: 20px;
+    }
 
-</style>
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    section {
+      padding: 30px 20px;
+      margin: 20px;
+      background: white;
+      border-left: 6px solid #6a11cb;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease;
+    }
+
+    section.active {
+      background: #ffeb3b;
+      border-left: 6px solid #ff4b2b;
+    }
+    section:last-of-type {
+       margin-bottom: 100vh; /* gives extra space at the end for contact section to become visible */
+    }
+
+
+    h2 {
+      color: #6a11cb;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: #e1bee7;
+      margin: 8px 0;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    ul li:hover {
+      background: #ce93d8;
+    }
+
+    footer {
+      background: #6a11cb;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
 <body>
+
 <header>
-    <h1>Rohit Sahu</h1>
-    <p>IT Student | Java Developer | Web Enthusiast</p>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#internship">Internship</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <h1>Rohit Sahu</h1>
+  <p>IT Student | Java Developer | Web Enthusiast</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#internship">Internship</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section id="about">
-    <h2>About Me</h2>
-    <p>I am currently pursuing B.Tech in Information Technology at Bansal Institute of Science and Technology, Bhopal. I have a passion for building web apps and working with Java-based systems. I am always eager to learn and explore new technologies.</p>
+  <h2>About Me</h2>
+  <p>I am currently pursuing B.Tech in Information Technology at Bansal Institute of Science and Technology, Bhopal...</p>
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>Java</li>
-        <li>HTML, CSS, JavaScript</li>
-        <li>MySQL</li>
-        <li>C/C++</li>
-        <li>Git & GitHub</li>
-    </ul>
+  <h2>Skills</h2>
+  <ul>
+    <li>Java</li>
+    <li>HTML, CSS, JavaScript</li>
+    <li>MySQL</li>
+    <li>C/C++</li>
+    <li>Git & GitHub</li>
+  </ul>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
-    <h3>Car Rental System</h3>
-    <p>A simple car booking and customer management app using Java and MySQL.</p>
-
-    <h3>Chatbot using NLP</h3>
-    <p>Created a chatbot that interacts using natural language. (In Progress)</p>
+  <h2>Projects</h2>
+  <h3>Car Rental System</h3>
+  <p>A simple car booking and customer management app using Java and MySQL.</p>
+  <h3>Chatbot using NLP</h3>
+  <p>Created a chatbot that interacts using natural language. (In Progress)</p>
 </section>
 
 <section id="internship">
-    <h2>Internship</h2>
-    <p><strong>Edunate Foundation – Teachkshakcham</strong></p>
-    <p>Worked on digital education initiatives and tech-based learning support for underprivileged students.</p>
+  <h2>Internship</h2>
+  <p><strong>Edunate Foundation – Teachkshakcham</strong></p>
+  <p>Worked on digital education initiatives and tech-based learning support.</p>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:iainrohit.jjmd@gmail.com">iainrohit.jjmd@gmail.com</a></p>
-    <p>Phone: 7610492446</p>
-    <p><a href="https://www.linkedin.com/in/rohit-sahu-601a61293" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/Rohit-sahu123" target="_blank">GitHub</a>
-    </p>
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:iainrohit.jjmd@gmail.com">iainrohit.jjmd@gmail.com</a></p>
+  <p>Phone: 7610492446</p>
+  <p><a href="https://www.linkedin.com/in/rohit-sahu-601a61293" target="_blank">LinkedIn</a> |
+     <a href="https://github.com/Rohit-sahu123" target="_blank">GitHub</a>
+  </p>
 </section>
 
 <footer>
-    <p>© 2025 Rohit Sahu. All rights reserved.</p>
+  <p>© 2025 Rohit Sahu. All rights reserved.</p>
 </footer>
+
+<script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  function getCurrentSection() {
+    let currentSection = sections[0];
+    let minDistance = Infinity;
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      const distance = Math.abs(rect.top);
+      if (rect.top < window.innerHeight && distance < minDistance) {
+        minDistance = distance;
+        currentSection = section;
+      }
+    });
+
+    return currentSection;
+  }
+
+  function activateSection(section) {
+    const id = section.getAttribute("id");
+
+    sections.forEach(s => s.classList.remove("active"));
+    navLinks.forEach(link => link.classList.remove("active"));
+
+    section.classList.add("active");
+    const navLink = document.querySelector(`nav a[href="#${id}"]`);
+    if (navLink) navLink.classList.add("active");
+  }
+
+ window.addEventListener("scroll", () => {
+  const current = getCurrentSection();
+  console.log("Current section:", current); // debug
+  if (current) {
+    activateSection(current);
+  }
+});
+
+
+  window.addEventListener("load", () => {
+    const current = getCurrentSection();
+    if (current) activateSection(current);
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      setTimeout(() => {
+        const current = getCurrentSection();
+        if (current) activateSection(current);
+      }, 400);
+    });
+  });
+</script>
+
 </body>
 </html>
+
